@@ -17,7 +17,7 @@
                 {{section.text}}
               </span>
               <ul>
-                  {{#ifeq section.className "Follow us"}}
+                  {{#ifeq section.text "Follow us"}}
                       <li class="social">
                           {{#each socialLinks as |link|}}
                               <a class="social-link {{link.className}}" title="{{link.title}}" target="{{link.target}}" href="{{link.href}}">{{d-icon link.icon}}</a>
