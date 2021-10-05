@@ -1,4 +1,7 @@
 // Used instead of dasherize for backwards compatibility with stable
+import { registerHelper } from 'discourse/lib/helpers';
+
+
 const getClassName = text => {
   return text.toLowerCase().replace(/\s/g, "-");
 };
@@ -6,6 +9,16 @@ const getClassName = text => {
 export default {
   setupComponent(args, component) {
     try {
+      registerHelper('ifeq', function (a, b, options) {
+        if (a == b) { return options.fn(this); }
+        return options.inverse(this);
+      });
+
+      registerHelper('ifnoteq', function (a, b, options) {
+        if (a != b) { return options.fn(this); }
+        return options.inverse(this);
+      });
+
       const splitLinkSections = settings.Link_sections.split("|").filter(Boolean);
       const splitLinks = settings.Links.split("|").filter(Boolean);
       const splitSmallLinks = settings.Small_links.split("|").filter(Boolean);
