@@ -17,11 +17,7 @@
                 {{section.text}}
               </span>
               <ul>
-                      <li class="social">
-                          {{#each socialLinks as |link|}}
-                              <a class="social-link {{link.className}}" title="{{link.title}}" target="{{link.target}}" href="{{link.href}}">{{d-icon link.icon}}</a>
-                          {{/each}}
-                      </li>
+                    {{#if section.childLinks}}
                   {{#each section.childLinks as |link|}}
                       <li class="footer-section-link-wrapper {{link.className}}">
                           <a class="footer-section-link" title="{{link.title}}" href="{{link.href}}" target="{{link.target}}">
@@ -29,6 +25,13 @@
                           </a>
                       </li>
                   {{/each}}
+                    {{else}}
+                        <li class="social">
+                            {{#each socialLinks as |link|}}
+                                <a class="social-link {{link.className}}" title="{{link.title}}" target="{{link.target}}" href="{{link.href}}">{{d-icon link.icon}}</a>
+                            {{/each}}
+                        </li>
+                    {{/if}}
               </ul>
             </div>
           {{/each}}
