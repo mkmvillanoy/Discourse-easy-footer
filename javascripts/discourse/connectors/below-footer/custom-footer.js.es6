@@ -1,5 +1,5 @@
 // Used instead of dasherize for backwards compatibility with stable
-import { registerHelper } from 'discourse/lib/helpers';
+import { registerHelper } from 'discourse-common/lib/helpers';
 
 
 const getClassName = text => {
