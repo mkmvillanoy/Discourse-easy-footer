@@ -103,6 +103,7 @@ export default {
 
       this.setProperties({
         mainHeading: settings.Heading,
+        mainHeadingImage: settings.Heading_image,
         blurb: settings.Blurb,
         linkSections: sectionsArray,
         smallLinks: smallLinksArray,

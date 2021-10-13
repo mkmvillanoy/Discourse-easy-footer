@@ -3,6 +3,11 @@ Heading:
   max: 25
   description:
     en: "Text for the heading in the footer - you can use your site name for example - Max length 25 characters"
+Heading_image:
+  type: string
+  default: "https://i.imgur.com/k7SnZth.jpg"
+  description:
+    en: 'This is the image for the heading in the footer.'
 Blurb:
   default: "Ius vitae ornatus at, ei mea sumo quot dicant. Ei tale democritum eos, in mea timeam accumsan forensibus. Ei his aperiam suavitate. Et debitis convenire sea, viris dictas latine."
   max: 180
